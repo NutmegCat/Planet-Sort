@@ -1,6 +1,7 @@
 class Planets {
     public static void main(String[] args) {
         String[] planets = { "Mercury", "Venus", "Earth", "Mars", "Jupiter", "Saturn", "Uranus", "Neptune", "Pluto" };
+        System.out.println(String.join(" ", planets));
         insertSort(planets);
     }
 
