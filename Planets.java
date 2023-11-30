@@ -15,17 +15,7 @@ class Planets {
             }
 
             planets[i + 1] = item;
-            printArray(planets);
+            System.out.println(String.join (" ", planets));
         }
-    }
-
-    private static void printArray(String[] array) {
-        for (int k = 0; k < array.length; k++) {
-            System.out.println(array[k]);
-            if (k < array.length - 1) {
-                System.out.println(" ");
-            }
-        }
-        System.out.println();
     }
 }
