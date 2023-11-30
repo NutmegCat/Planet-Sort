@@ -1,18 +1,25 @@
 class Planets {
     public static void main(String[] args) {
-        String[] list = {"Mercury" , "Venus" , "Earth", "Mars", "Jupiter", "Saturn", "Uranus", "Neptune", "Pluto"}; 
-        
+        String[] planets = { "Mercury", "Venus", "Earth", "Mars", "Jupiter", "Saturn", "Uranus", "Neptune", "Pluto" };
+        System.out.println("Original Array:");
+        for (String planet: planets) {
+            System.out.print(planet + " ");
+        }
+        insertSort(planets);
     }
 
-    public static void insertSort(double[] list) {
-        for (int top = 1; top < list.length; top++) {
-            double item = list[top];
-            int i = top;
-            while (i > 0 && item < list[i - 1]) {
-                list[i] = list[i - 1];
-                i--;
+    public static void insertSort(String[] planets) {
+        for (int top = 1; top < planets.length; top++) {
+            String item = planets[top];
+            int i = top - 1;
+            while (i >= 0 && planets[i].compareTo(item) > 0) {
+                planets[i + 1] = planets[i];
+                i = i - 1;
             }
-            list[i] = item;
+            planets[i + 1] = item;
+        }
+        for (String planet : planets) {
+            System.out.print(planet + " ");
         }
     }
 }
