@@ -18,6 +18,7 @@ class Planets {
             }
             planets[i + 1] = item;
         }
+        System.out.println("\n\nSorted Array");
         for (String planet : planets) {
             System.out.print(planet + " ");
         }
